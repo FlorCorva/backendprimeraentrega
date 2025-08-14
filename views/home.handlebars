@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Lista de Productos (HTTP)</h1>
 
 <ul>
@@ -7,3 +8,49 @@
     </li>
   {{/each}}
 </ul>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Productos</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .product { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    .pagination { margin-top: 20px; }
+    .pagination a { margin: 0 5px; text-decoration: none; }
+    .pagination span { margin: 0 5px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+
+  {{#if products.length}}
+    {{#each products}}
+      <div class="product">
+        <h2>{{this.title}}</h2>
+        <p>Precio: ${{this.price}}</p>
+        <p>Categoría: {{this.category}}</p>
+        <p>Stock: {{this.stock}}</p>
+      </div>
+    {{/each}}
+
+    <div class="pagination">
+      {{#if pagination.hasPrevPage}}
+        <a href="/?page={{pagination.prevPage}}">&laquo; Anterior</a>
+      {{/if}}
+
+      <span>Página {{pagination.currentPage}} de {{pagination.totalPages}}</span>
+
+      {{#if pagination.hasNextPage}}
+        <a href="/?page={{pagination.nextPage}}">Siguiente &raquo;</a>
+      {{/if}}
+    </div>
+
+  {{else}}
+    <p>No hay productos para mostrar.</p>
+  {{/if}}
+
+</body>
+</html>
+>>>>>>> a1f3728 (proyecto final a medio terminar)

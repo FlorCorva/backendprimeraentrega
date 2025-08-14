@@ -13,6 +13,10 @@
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
+<<<<<<< HEAD
+=======
+    "mongoose-paginate-v2": "^1.9.1",
+>>>>>>> a1f3728 (proyecto final a medio terminar)
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
